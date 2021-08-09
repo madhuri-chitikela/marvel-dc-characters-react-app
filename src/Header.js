@@ -6,8 +6,8 @@ function Header(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
-                    <img src={logoImg} style={{ height: "40px" }} alt="monkey" />
+                <a className="navbar-brand" href="">
+                    <img src={logoImg} style={{ height: "40px" }} alt="marvel" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@ function Header(props) {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://github.com/madhuri-chitikela/monkey-gallery-react-app" tabIndex="-1">
+                            <a className="nav-link" href="https://github.com/madhuri-chitikela/marvel-dc-characters-react-app" tabIndex="-1">
                                 <img src={githubImg} style={{ height: "40px" }} alt="github Icon" />
                             </a>
                         </li>
