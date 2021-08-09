@@ -1,36 +1,39 @@
+import columns from './columns.json';
+import MarvelHeroGridRow from './MarvelHeroGridRow';
 function MarvelHerosGrid(props) {
+    const { data } = props
     return (
         <div>
             <div className="alert alert-primary" role="alert">
-                A simple primary alert—check it out!
+                Displaying {data.length} records!
             </div>
             <table className="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        {
+                            columns.map(columnName => {
+                                return (
+                                    <th
+                                        key={`columns-header-${columnName}`}
+                                        scope="col">
+                                        {columnName}
+                                    </th>
+                                )
+                            })
+
+                        }
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        data.map(row => {
+                            return (
+                                <MarvelHeroGridRow
+                                    row={row}
+                                />
+                            )
+                        })
+                    }
                 </tbody>
             </table>
         </div>
