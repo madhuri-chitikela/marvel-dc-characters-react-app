@@ -1,13 +1,17 @@
-import MarvelHerosGridRow from "./MarvelHerosGridRow"
-import columns from './columns.json'
-function MarvelHerosGrid(props) {
+import PowerGridRow from './PowerGridRow'
+import columns from './powerGridColumns.json'
+function PowerGrid(props) {
     const { data } = props
+    const filteredData = [...data]
+    if (filteredData.length > 100) {
+        filteredData.length = 100
+    }
     return (
         <div>
             <div className="alert alert-primary" role="alert">
-                Showing {data.length} recods
+                Showing {filteredData.length} recods
             </div>
-            <table className="table table-sm">
+            <table className="table table-sm table-striped">
                 <thead>
                     <tr>
                         {
@@ -26,9 +30,9 @@ function MarvelHerosGrid(props) {
                 </thead>
                 <tbody style={{ height: "500px", overflow: "auto" }}>
                     {
-                        data.map(row => {
+                        filteredData.map(row => {
                             return (
-                                <MarvelHerosGridRow
+                                <PowerGridRow
                                     key={`row-${row.ID}`}
                                     row={row}
                                 />
@@ -42,4 +46,4 @@ function MarvelHerosGrid(props) {
 
     )
 }
-export default MarvelHerosGrid;
+export default PowerGrid;

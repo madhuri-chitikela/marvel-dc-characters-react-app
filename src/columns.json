@@ -8,5 +8,12 @@
     "Height",
     "Weight",
     "Race",
-    "Publisher"
+    "Publisher",
+    "Gender",
+    "Identity",
+    "Status",
+    "Appearances",
+    "FirstAppearance",
+    "Year",
+    "Universe"
 ]

@@ -1,5 +1,5 @@
 import columns from './columns.json'
-export default function MarvelHerosGridRow(props) {
+export default function HerosGridRow(props) {
     const { row } = props
     return (
         <tr>
