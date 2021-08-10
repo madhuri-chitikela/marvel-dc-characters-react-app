@@ -1,12 +1,19 @@
 [
     "ID",
     "Name",
+    "Identity",
     "Alignment",
     "EyeColor",
     "HairColor",
     "SkinColor",
+    "Gender",
+    "Status",
+    "Appearances",
     "Height",
     "Weight",
     "Race",
-    "Publisher"
+    "Publisher",
+    "FirstAppearance",
+    "Year",
+    "Universe"
 ]

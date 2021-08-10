@@ -1,16 +1,16 @@
-import columns from './columns.json';
-function MarvelHeroGridRow(props) {
+import columns from './PowerMatrixColumns.json';
+function PowerGridRow(props) {
     const { row } = props
     return (
         <tr
-            key={`row-${row.ID}`
-            }>
-
+        //key={`row-${row.ID}`}
+        >
             {
                 columns.map(columnName => {
                     return (
                         <td
-                            key={`row-${row.ID}-cell-${columnName}`}>
+                            key={`row-${row.ID}-cell-${columnName}`}
+                        >
                             {row[columnName]}
                         </td>
                     )
@@ -19,4 +19,4 @@ function MarvelHeroGridRow(props) {
         </tr>
     )
 }
-export default MarvelHeroGridRow;
+export default PowerGridRow;
